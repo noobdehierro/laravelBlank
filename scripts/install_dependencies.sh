@@ -16,7 +16,7 @@ apt-get install -y git
 apt-get -y remove httpd* php*
 
 # Install PHP 7.1
-apt-get install -y php7.1 php7.1-cli php7.1-fpm php7.1-mysql php7.1-xml php7.1-curl php7.1-opcache php7.1-pdo php7.1-gd php7.1-pecl-apcu php7.1-mbstring php7.1-imap php7.1-pecl-redis php7.1-mcrypt php7.1-mysqlnd mod24_ssl
+apt-get install -y php71 php71-cli php71-fpm php71-mysql php71-xml php71-curl php71-opcache php71-pdo php71-gd php71-pecl-apcu php71-mbstring php71-imap php71-pecl-redis php71-mcrypt php71-mysqlnd mod24_ssl
 
 # Install Apache 2.4
 apt-get -y install httpd24
