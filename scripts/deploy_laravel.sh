@@ -1,39 +1,39 @@
-!/bin/bash
+#!/bin/bash
 
 # Enter html directory
-cd htdocs
+cd /opt/bitnami/apache2/htdocs/
 
 # Create cache and chmod folders
-mkdir -p htdocs/bootstrap/cache
-mkdir -p htdocs/storage/framework/sessions
-mkdir -p htdocs/storage/framework/views
-mkdir -p htdocs/storage/framework/cache
-mkdir -p htdocs/public/files/
+mkdir -p /opt/bitnami/apache2/htdocs/bootstrap/cache
+mkdir -p /opt/bitnami/apache2/htdocs/storage/framework/sessions
+mkdir -p /opt/bitnami/apache2/htdocs/storage/framework/views
+mkdir -p /opt/bitnami/apache2/htdocs/storage/framework/cache
+mkdir -p /opt/bitnami/apache2/htdocs/public/files/
 
 # Install dependencies
 export COMPOSER_ALLOW_SUPERUSER=1
-composer install -d htdocs/
+composer install -d /opt/bitnami/apache2/htdocs/
 
 # Copy configuration from /var/www/.env, see README.MD for more information
-cp /var/www/.env htdocs/.env
+cp /var/www/.env /opt/bitnami/apache2/htdocs/.env
 
 # Migrate all tables
-php htdocs/artisan migrate
+php /opt/bitnami/apache2/htdocs/artisan migrate
 
 # Clear any previous cached views
-php htdocs/artisan config:clear
-php htdocs/artisan cache:clear
-php htdocs/artisan view:clear
+php /opt/bitnami/apache2/htdocs/artisan config:clear
+php /opt/bitnami/apache2/htdocs/artisan cache:clear
+php /opt/bitnami/apache2/htdocs/artisan view:clear
 
 # Optimize the application
-php htdocs/artisan config:cache
-php htdocs/artisan optimize
-#php htdocs/artisan route:cache
+php /opt/bitnami/apache2/htdocs/artisan config:cache
+php /opt/bitnami/apache2/htdocs/artisan optimize
+#php /opt/bitnami/apache2/htdocs/artisan route:cache
 
 # Change rights
-chmod 777 -R htdocs/bootstrap/cache
-chmod 777 -R htdocs/storage
-chmod 777 -R htdocs/public/files/
+chmod 777 -R /opt/bitnami/apache2/htdocs/bootstrap/cache
+chmod 777 -R /opt/bitnami/apache2/htdocs/storage
+chmod 777 -R /opt/bitnami/apache2/htdocs/public/files/
 
 # Bring up application
-php htdocs/artisan up
+php /opt/bitnami/apache2/htdocs/artisan up
