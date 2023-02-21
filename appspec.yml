@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html/
+    destination: /opt/bitnami/apache2/htdocs
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
