@@ -4,20 +4,20 @@
 set -o errexit -o pipefail
 
 # Update yum
-yum update -y
+apt update -y
 
 # Install packages
-yum install -y curl
-yum install -y git
+apt install -y curl
+apt install -y git
 
 # Remove current apache & php
-yum -y remove httpd* php*
+apt -y remove httpd* php*
 
 # Install PHP 7.1
-yum install -y php71 php71-cli php71-fpm php71-mysql php71-xml php71-curl php71-opcache php71-pdo php71-gd php71-pecl-apcu php71-mbstring php71-imap php71-pecl-redis php71-mcrypt php71-mysqlnd mod24_ssl
+apt install -y php71 php71-cli php71-fpm php71-mysql php71-xml php71-curl php71-opcache php71-pdo php71-gd php71-pecl-apcu php71-mbstring php71-imap php71-pecl-redis php71-mcrypt php71-mysqlnd mod24_ssl
 
 # Install Apache 2.4
-yum -y install httpd24
+apt -y install httpd24
 
 # Allow URL rewrites
 sed -i 's#AllowOverride None#AllowOverride All#' /etc/httpd/conf/httpd.conf
