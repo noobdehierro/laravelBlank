@@ -9,6 +9,8 @@ mkdir -p /var/www/html/storage/framework/sessions
 mkdir -p /var/www/html/storage/framework/views
 mkdir -p /var/www/html/storage/framework/cache
 mkdir -p /var/www/html/public/files/
+mkdir -p /var/www/html/public/prueba/
+
 
 # # Install dependencies
 # export COMPOSER_ALLOW_SUPERUSER=1
