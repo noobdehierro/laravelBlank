@@ -1,16 +1,14 @@
-#!/bin/bash
+# #!/bin/bash
 
-# Enter html directory
-cd /var/www/html/
+# # Enter html directory
+# cd /var/www/html/
 
-# Create cache and chmod folders
-mkdir -p /opt/bitnami/apache2/htdocsbootstrap/cache
-mkdir -p /opt/bitnami/apache2/htdocsstorage/framework/sessions
-mkdir -p /opt/bitnami/apache2/htdocsstorage/framework/views
-mkdir -p /opt/bitnami/apache2/htdocsstorage/framework/cache
-mkdir -p /opt/bitnami/apache2/htdocspublic/files/
-mkdir -p /opt/bitnami/apache2/htdocspublic/prueba/
-
+# # Create cache and chmod folders
+# mkdir -p /var/www/html/bootstrap/cache
+# mkdir -p /var/www/html/storage/framework/sessions
+# mkdir -p /var/www/html/storage/framework/views
+# mkdir -p /var/www/html/storage/framework/cache
+# mkdir -p /var/www/html/public/files/
 
 # # Install dependencies
 # export COMPOSER_ALLOW_SUPERUSER=1
@@ -39,3 +37,6 @@ mkdir -p /opt/bitnami/apache2/htdocspublic/prueba/
 
 # # Bring up application
 # php /var/www/html/artisan up
+
+
+
