@@ -1,7 +1,7 @@
-# #!/bin/bash
+#!/bin/bash
 
-# # Exit on error
-# set -o errexit -o pipefail
+# Exit on error
+set -o errexit -o pipefail
 
 # add-apt-repository ppa:ondrej/php
 
