@@ -43,6 +43,7 @@ sudo cp .env.example .env
 sudo chmod 777 -R storage/*
 sudo php artisan key:generate
 sudo php artisan migrate
+#nada
 # mkdir -p /var/www/html/public/files/
 # mkdir -p /var/www/html/public/files/
 # mkdir -p /var/www/html/public/files/
