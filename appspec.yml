@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/MyProyect
+    destination: /var/www/MyProject
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
