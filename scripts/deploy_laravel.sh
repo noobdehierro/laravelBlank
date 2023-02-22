@@ -39,7 +39,7 @@
 # php /var/www/html/artisan up
 cd /var/www/MyProject/
 sudo composer install
-sudo cp .env.example .env
+# sudo cp .env.example .env
 sudo chmod 777 -R storage/*
 sudo php artisan key:generate
 sudo php artisan migrate
