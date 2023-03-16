@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/MyProject
+    destination: /home/ubuntu/laravelblank
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
