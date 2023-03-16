@@ -38,7 +38,7 @@
 # # Bring up application
 # php /var/www/html/artisan up
 cd /home/ubuntu/laravelblank/
-sudo composer install
+sudo composer update
 sudo cp .env.example .env
 sudo chmod 777 -R storage/*
 sudo php artisan key:generate
